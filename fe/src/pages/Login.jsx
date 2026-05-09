@@ -10,7 +10,7 @@ const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
 
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+const BASE_URL = process.env.REACT_APP_API_URL || "https://hiring-dashboard-project.onrender.com";
 
 const handleLogin = async (e) => {
 e.preventDefault();

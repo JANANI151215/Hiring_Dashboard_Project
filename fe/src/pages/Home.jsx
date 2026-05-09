@@ -30,15 +30,15 @@ export default function Home() {
 
       switch (type) {
         case "interviews":
-          url = "http://localhost:8080/api/home/interviews/upcoming";
+          url = "https://hiring-dashboard-project.onrender.com/api/home/interviews/upcoming";
           title = "Upcoming Interviews";
           break;
         case "hires":
-          url = "http://localhost:8080/api/home/candidates/hired";
+          url = "https://hiring-dashboard-project.onrender.com/api/home/candidates/hired";
           title = "Recent Hires";
           break;
         case "top":
-          url = `http://localhost:8080/api/home/candidates/top?page=${page}`;
+          url = `https://hiring-dashboard-project.onrender.com/api/home/candidates/top?page=${page}`;
           title = "Top Candidates";
           break;
         default:

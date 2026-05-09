@@ -12,7 +12,7 @@ export default function ApplyPage() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:8080/api/interviews/apply",
+        "https://hiring-dashboard-project.onrender.com/api/interviews/apply",
         { jobTitle, companyName, candidateId: user._id, candidateName: user.fullName },
         { headers: { Authorization: `Bearer ${user.token}` } }
       );

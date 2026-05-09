@@ -41,7 +41,7 @@ export const AuthProvider = ({ children }) => {
       try {
         if (token && user?._id) {
           const res = await axios.get(
-            `http://localhost:8080/api/users/profile/${user._id}`,
+            `https://hiring-dashboard-project.onrender.com/api/users/profile/${user._id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
               withCredentials: true,

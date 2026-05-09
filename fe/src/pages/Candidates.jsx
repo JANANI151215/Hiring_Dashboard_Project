@@ -26,7 +26,7 @@ export default function Candidates() {
   useEffect(() => {
     async function fetchCandidates() {
       try {
-        const res = await axios.get("http://localhost:8080/api/candidates");
+        const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/candidates");
         setCandidates(res.data);
         setLoading(false);
       } catch (err) {
@@ -60,7 +60,7 @@ export default function Candidates() {
       };
 
       const res = await axios.post(
-        "http://localhost:8080/api/candidates",
+        "https://hiring-dashboard-project.onrender.com/api/candidates",
         payload
       );
 
@@ -89,7 +89,7 @@ export default function Candidates() {
     if (!window.confirm("Are you sure you want to delete this candidate?")) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/candidates/${id}`);
+      await axios.delete(`https://hiring-dashboard-project.onrender.com/api/candidates/${id}`);
       setCandidates((prev) => prev.filter((c) => c._id !== id));
       alert("Candidate deleted successfully!");
     } catch (err) {

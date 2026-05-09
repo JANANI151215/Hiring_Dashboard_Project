@@ -31,7 +31,7 @@ export default function InterviewsPage() {
       setLoading(true);
       if (!user?.token) throw new Error("User not authenticated");
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
-      const res = await axios.get("http://localhost:8080/api/interviews", config);
+      const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/interviews", config);
       setInterviews(res.data);
     } catch (err) {
       console.error("Failed to fetch interviews:", err);
@@ -91,7 +91,7 @@ export default function InterviewsPage() {
         status: editData.status || "upcoming",
       };
       await axios.patch(
-        `http://localhost:8080/api/interviews/${selectedInterview._id}`,
+        `https://hiring-dashboard-project.onrender.com/api/interviews/${selectedInterview._id}`,
         payload,
         config
       );
@@ -116,7 +116,7 @@ export default function InterviewsPage() {
       if (!window.confirm("Are you sure you want to delete this interview?")) return;
       try {
         const config = { headers: { Authorization: `Bearer ${user.token}` } };
-        await axios.delete(`http://localhost:8080/api/interviews/${id}`, config);
+        await axios.delete(`https://hiring-dashboard-project.onrender.com/api/interviews/${id}`, config);
         await fetchInterviews();
         showToastMessage("Interview deleted successfully!", "red");
       } catch (err) {
@@ -138,7 +138,7 @@ export default function InterviewsPage() {
     try {
       const config = { headers: { Authorization: `Bearer ${user.token}` } };
       const payload = { ...newInterview, interviewDate: newInterview.dateTime };
-      await axios.post("http://localhost:8080/api/interviews", payload, config);
+      await axios.post("https://hiring-dashboard-project.onrender.com/api/interviews", payload, config);
       await fetchInterviews();
       showToastMessage("Interview created successfully!", "green");
       setShowAddModal(false);

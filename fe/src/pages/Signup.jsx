@@ -21,7 +21,7 @@ export default function Signup() {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:8080/api/users/register", {
+      const res = await fetch("https://hiring-dashboard-project.onrender.com/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

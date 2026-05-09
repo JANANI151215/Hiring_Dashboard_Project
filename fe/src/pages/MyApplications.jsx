@@ -15,7 +15,7 @@ export default function MyApplications() {
       try {
         const token = localStorage.getItem("token");
         const { data } = await axios.get(
-          "http://localhost:8080/api/applications/my-applications",
+          "https://hiring-dashboard-project.onrender.com/api/applications/my-applications",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -47,7 +47,7 @@ export default function MyApplications() {
     try {
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        `http://localhost:8080/api/applications/edit/${editingId}`,
+        `https://hiring-dashboard-project.onrender.com/api/applications/edit/${editingId}`,
         { resume, coverLetter },
         { headers: { Authorization: `Bearer ${token}` } }
       );

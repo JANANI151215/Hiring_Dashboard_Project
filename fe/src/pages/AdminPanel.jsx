@@ -23,7 +23,7 @@ export default function AdminPanel() {
         if (!token) throw new Error("User not authenticated");
 
         // ✅ Updated backend port
-        const BASE_URL = "http://localhost:8080";
+        const BASE_URL = "https://hiring-dashboard-project.onrender.com";
 
         const config = {
           headers: { Authorization: `Bearer ${token}` },

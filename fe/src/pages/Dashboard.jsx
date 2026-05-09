@@ -46,7 +46,7 @@ export default function Dashboard() {
   const fetchDashboard = useCallback(async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:8080/api/dashboard/stats", {
+      const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/dashboard/stats", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -82,13 +82,13 @@ export default function Dashboard() {
       let url = "";
       switch (type) {
         case "jobs":
-          url = "http://localhost:8080/api/jobs";
+          url = "https://hiring-dashboard-project.onrender.com/api/jobs";
           break;
         case "candidates":
-          url = "http://localhost:8080/api/candidates";
+          url = "https://hiring-dashboard-project.onrender.com/api/candidates";
           break;
         case "hired":
-          url = "http://localhost:8080/api/candidates?hired=true";
+          url = "https://hiring-dashboard-project.onrender.com/api/candidates?hired=true";
           break;
         default:
           return;

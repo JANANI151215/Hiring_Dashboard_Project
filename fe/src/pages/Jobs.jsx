@@ -12,7 +12,7 @@ export default function Jobs() {
     const fetchJobs = async () => {
       try {
         // Fetch all jobs
-        const res = await axios.get("http://localhost:8080/api/jobs");
+        const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/jobs");
         setJobs(res.data);
 
         // Fetch applied jobs if token exists
@@ -20,7 +20,7 @@ export default function Jobs() {
         if (token) {
           const config = { headers: { Authorization: `Bearer ${token}` } };
           const appliedRes = await axios.get(
-            "http://localhost:8080/api/applications/my-applications",
+            "https://hiring-dashboard-project.onrender.com/api/applications/my-applications",
             config
           );
 
@@ -46,7 +46,7 @@ export default function Jobs() {
 
       // Correct backend route for applying to a job
       const res = await axios.post(
-        `http://localhost:8080/api/applications/apply/${jobId}`,
+        `https://hiring-dashboard-project.onrender.com/api/applications/apply/${jobId}`,
         {},
         config
       );

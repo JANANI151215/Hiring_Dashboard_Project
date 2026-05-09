@@ -29,7 +29,7 @@ export default function NewJob() {
         ? { headers: { Authorization: `Bearer ${token}` } }
         : {};
 
-      const res = await axios.post("http://localhost:8080/api/jobs", job, config);
+      const res = await axios.post("https://hiring-dashboard-project.onrender.com/api/jobs", job, config);
 
       console.log("✅ Job created:", res.data);
       navigate("/jobs", { replace: true });

@@ -22,7 +22,7 @@ export default function CandidateProfile() {
   useEffect(() => {
     async function fetchCandidate() {
       try {
-        const res = await axios.get(`http://localhost:8080/api/candidates/${id}`);
+        const res = await axios.get(`https://hiring-dashboard-project.onrender.com/api/candidates/${id}`);
         setCandidate(res.data);
         setFormData({
           name: res.data.name || "",
@@ -42,7 +42,7 @@ export default function CandidateProfile() {
   const handleUpdate = async () => {
     try {
       // send full formData including role to backend
-      const res = await axios.put(`http://localhost:8080/api/candidates/${id}`, {
+      const res = await axios.put(`https://hiring-dashboard-project.onrender.com/api/candidates/${id}`, {
         name: formData.name,
         role: formData.role,
         status: formData.status,

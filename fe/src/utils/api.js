@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: "https://hiring-dashboard-project.onrender.com/api",
   timeout: 5000,
 });
 

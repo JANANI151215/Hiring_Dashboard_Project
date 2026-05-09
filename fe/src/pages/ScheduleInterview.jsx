@@ -16,7 +16,7 @@ export default function ScheduleInterviews() {
           : {};
 
         const res = await axios.get(
-          "http://localhost:8080/api/interviews",
+          "https://hiring-dashboard-project.onrender.com/api/interviews",
           config
         );
         setInterviews(res.data);

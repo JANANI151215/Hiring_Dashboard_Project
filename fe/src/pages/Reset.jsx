@@ -20,7 +20,7 @@ if (password !== confirmPassword) {
 
 try {
   setLoading(true);
-  const res = await axios.post(`http://localhost:8080/api/password/reset/${token}`, { password });
+  const res = await axios.post(`https://hiring-dashboard-project.onrender.com/api/password/reset/${token}`, { password });
   setMessage(res.data.message || "Password reset successful!");
   setTimeout(() => navigate("/login"), 2000);
 } catch (err) {

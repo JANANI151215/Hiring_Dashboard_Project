@@ -9,7 +9,7 @@ export default function ChangePassword() {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+  const BASE_URL = process.env.REACT_APP_API_URL || "https://hiring-dashboard-project.onrender.com";
 
   const handleChangePassword = async (e) => {
     e.preventDefault();

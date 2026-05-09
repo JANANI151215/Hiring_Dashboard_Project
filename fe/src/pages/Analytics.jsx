@@ -32,7 +32,7 @@ export default function Analytics() {
   useEffect(() => {
     async function fetchCandidates() {
       try {
-        const res = await axios.get("http://localhost:8080/api/candidates");
+        const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/candidates");
         setCandidates(res.data);
       } catch (err) {
         console.error("Error fetching analytics:", err);

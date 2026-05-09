@@ -36,7 +36,7 @@ export default function Profile() {
       if (profilePic) formData.append("profilePic", profilePic);
 
       const res = await axios.put(
-        `http://localhost:8080/api/users/profile/${user._id}`,
+        `https://hiring-dashboard-project.onrender.com/api/users/profile/${user._id}`,
         formData,
         {
           headers: {
@@ -73,7 +73,7 @@ export default function Profile() {
                 />
               ) : user?.profilePic ? (
                 <img
-                  src={`http://localhost:8080/uploads/${user.profilePic}`}
+                  src={`https://hiring-dashboard-project.onrender.com/uploads/${user.profilePic}`}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

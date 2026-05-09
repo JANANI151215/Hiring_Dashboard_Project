@@ -17,7 +17,7 @@ export default function JobList() {
         const token = localStorage.getItem("token");
         const config = { headers: { Authorization: `Bearer ${token}` } };
 
-        const res = await axios.get("http://localhost:8080/jobs", config);
+        const res = await axios.get("https://hiring-dashboard-project.onrender.com/jobs", config);
         setJobs(res.data);
       } catch (err) {
         console.error("Failed to fetch jobs:", err);

@@ -14,7 +14,7 @@ export default function MyApplications() {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/applications/my-applications", config);
+        const res = await axios.get("https://hiring-dashboard-project.onrender.com/api/applications/my-applications", config);
         setApplications(res.data);
       } catch (err) {
         console.error(err.response?.data || err.message);
@@ -33,7 +33,7 @@ export default function MyApplications() {
   const saveEdit = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:8080/api/applications/edit/${editingId}`,
+        `https://hiring-dashboard-project.onrender.com/api/applications/edit/${editingId}`,
         editData,
         config
       );
